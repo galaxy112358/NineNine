@@ -27,5 +27,3 @@
 任何一方占领的棋盘连成一条线后，该方获胜，游戏结束<br>
 [![获胜图.png](https://img1.imgtp.com/2023/05/26/5R04owSs.png)](https://img1.imgtp.com/2023/05/26/5R04owSs.png)<br>
 *蓝色方获胜*<br>
-### ORIGIN
-这个文件夹中包含了
