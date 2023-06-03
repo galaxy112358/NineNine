@@ -58,7 +58,7 @@ int main()
 			cout << "即将进入联机模式" << endl;
 			Sleep(2000);
 			getStart();
-			NineNineOnline game(1);
+			NineNineOnline game(0);
 			int signal = game.prepareGame();
 			if (signal == 0)
 			{

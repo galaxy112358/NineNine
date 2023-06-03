@@ -36,8 +36,10 @@ void NineNine::GameInfo::resetGameInfo()
 		else turn = randomNum() % 2;
 	}
 	lastPos.x = 666;
-	lastPos.y = 4;
-	available[4] = 1;
+	lastPos.y = startBoard;
+	available[startBoard] = 1;
+	startBoard++;
+	startBoard %= 9;
 }
 
 void NineNine::changeState(const POINT pos)

@@ -553,10 +553,10 @@ int Judger::judgeEnd(const int(*board)[9], const int* occupy, const int* availab
 	bool flag = 0;
 	int i = 0, j = 0;
 	for (i = 0; i < 3; i++) {
-		if (occupy[i * 3] != 0 and occupy[i * 3] == occupy[1 + i * 3] and occupy[i * 3] == occupy[2 + i * 3]) return occupy[i * 3];
-		if (occupy[i] != 0 and occupy[i] == occupy[i + 3] and occupy[i] == occupy[i + 6]) return occupy[i];
+		if (occupy[i * 3] != 3 and occupy[i * 3] != 0 and occupy[i * 3] == occupy[1 + i * 3] and occupy[i * 3] == occupy[2 + i * 3]) return occupy[i * 3];
+		if (occupy[i] != 3 and occupy[i] != 0 and occupy[i] == occupy[i + 3] and occupy[i] == occupy[i + 6]) return occupy[i];
 	}
-	if (occupy[4] != 0) {
+	if (occupy[4] != 0 and occupy[4] != 3) {
 		if (occupy[0] == occupy[4] and occupy[8] == occupy[4]) return occupy[4];
 		if (occupy[2] == occupy[4] and occupy[6] == occupy[4]) return occupy[4];
 	}
@@ -604,7 +604,8 @@ Connector::Connector(int n)
 		else if (n == 0)
 		{
 			const short p = 1123;
-			const char* addr = "127.0.0.1";
+			const char* addr = "152.136.206.64";
+			Sleep(1000);
 			serverSocket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 			if (serverSocket == INVALID_SOCKET)
 			{
